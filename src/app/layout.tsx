@@ -58,8 +58,7 @@ export default function RootLayout({
     acceptsReservations: false,
     menu: "/menu",
     image: "/og-image.jpg",
-    // If you have a WhatsApp business number, add it here
-    // telephone: "+234XXXXXXXXXX",
+    telephone: "+2348074349520",
     hasMenu: {
       "@type": "Menu",
       hasMenuSection: [
