@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://dynah-sweet-treats.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://dynah-sweet-treat.vercel.app/"
   ),
   title: "Dynah Sweet Treats | Best Smoky Jollof in FTD",
   description:
