@@ -2,6 +2,11 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    { url: "https://yourdomain.com", lastModified: new Date() },
+    {
+      url: "https://dynah-sweet-treat.vercel.app",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
   ];
 }
