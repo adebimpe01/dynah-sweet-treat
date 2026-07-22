@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     description: "Better food, better meal — order on WhatsApp for pickup or delivery.",
     images: ["/og-image.jpg"],
   },
+   verification: {
+    google: "Ll2H5S7JdbXJm6tSPiyPYFhTOWXvlXevGxubLi9bm0c",
+  },
 };
 export default function RootLayout({
   children,
