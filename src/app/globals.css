@@ -21,11 +21,12 @@
 
 :root {
   --color-cream: #fbf6ee;
-  --color-ink: #2a1d14;
+  --color-ink: #ede6e2;
   --color-ink-soft: #6f5d4f;
   --color-primary: #c8541f;
   --color-primary-dark: #9c3f16;
   --color-line: #ece2d3;
+  color-scheme: light;
 }
 
 @theme inline {
