@@ -8,10 +8,26 @@ export function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("loading");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setStatus("idle");
+      setSubmitted(true);
+    } catch {
+      setStatus("error");
+    }
   }
 
   const whatsappText = `Hi Dynah Sweet Treats! My name is ${name || "___"}.\n\n${message || "___"}`;
@@ -31,7 +47,7 @@ export function ContactForm() {
         <div className="bg-cream rounded-2xl p-8 text-center">
           <p className="font-semibold text-ink mb-2">Thanks, {name || "friend"}!</p>
           <p className="text-ink-soft mb-6">
-            Tap below to send this straight to us on WhatsApp — that's the fastest way we respond.
+            We've received your message and will get back to you soon. Want a faster reply? Tap below to also send it on WhatsApp.
           </p>
           <a
             href={getWhatsAppLink(whatsappText)}
@@ -91,10 +107,17 @@ export function ContactForm() {
 
           <button
             type="submit"
-            className="bg-primary text-white py-3 rounded-full font-semibold mt-2"
+            disabled={status === "loading"}
+            className="bg-primary text-white py-3 rounded-full font-semibold mt-2 disabled:opacity-50"
           >
-            Continue
+            {status === "loading" ? "Sending..." : "Continue"}
           </button>
+
+          {status === "error" && (
+            <p className="text-sm text-red-600 text-center">
+              Something went wrong. Please try again or message us directly.
+            </p>
+          )}
         </form>
       )}
 
@@ -102,10 +125,10 @@ export function ContactForm() {
         Prefer email or a call?
         <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 mt-3">
           <a href="mailto:hello@dynahsweettreats.com" className="hover:text-primary">
-            hello@dynahsweettreats.com
+            modinatbello02@gmail.com
           </a>
-          <a href="tel:+2340000000000" className="hover:text-primary">
-            +234 000 000 0000
+          <a href="tel:+2348074349520" className="hover:text-primary">
+            +234 807 4349 520
           </a>
         </div>
       </div>
