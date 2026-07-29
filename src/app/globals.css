@@ -1,5 +1,149 @@
 @import "tailwindcss";
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-left {
+  animation: fade-left 0.6s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+@keyframes drop-top-left {
+  from {
+    opacity: 0;
+    transform: translate(-80px, -80px) rotate(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-8deg);
+  }
+}
+
+@keyframes drop-top-right {
+  from {
+    opacity: 0;
+    transform: translate(80px, -80px) rotate(30deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(6deg);
+  }
+}
+
+@keyframes drop-bottom-left {
+  from {
+    opacity: 0;
+    transform: translate(-80px, 80px) rotate(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(4deg);
+  }
+}
+
+@keyframes drop-bottom-right {
+  from {
+    opacity: 0;
+    transform: translate(80px, 80px) rotate(30deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(4deg);
+  }
+}
+
+.animate-drop-top-left {
+  animation: drop-top-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-drop-top-right {
+  animation: drop-top-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-drop-bottom-left {
+  animation: drop-bottom-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-drop-bottom-right {
+  animation: drop-bottom-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-left {
+  animation: fade-left 0.7s ease-out forwards;
+}
+
+.animate-fade-right {
+  animation: fade-right 0.7s ease-out forwards;
+}
+
 :root {
   --color-cream: #fbf6ee;
   --color-ink: #2b241f;

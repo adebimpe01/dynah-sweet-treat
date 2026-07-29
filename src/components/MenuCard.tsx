@@ -1,4 +1,7 @@
+"use client"; 
+
 import Image from "next/image";
+import { useCart } from "@/lib/cart-context"; // NEW
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 type MenuCardProps = {
@@ -8,6 +11,8 @@ type MenuCardProps = {
 };
 
 export function MenuCard({ name, price, image }: MenuCardProps) {
+  const { addItem } = useCart(); 
+
   return (
     <div className="group flex flex-col h-full rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <div className="relative w-full aspect-square">
@@ -22,15 +27,23 @@ export function MenuCard({ name, price, image }: MenuCardProps) {
       <div className="p-4 flex flex-col flex-1">
         <h3 className="font-display font-semibold text-ink text-lg">{name}</h3>
         <p className="text-primary font-semibold mt-1 mb-auto">{price}</p>
+
+        <button
+          onClick={() => addItem({ name, price, image })}
+          className="mt-3 w-full text-center bg-primary text-white py-2 rounded-full text-sm font-semibold"
+        >
+          Add to cart
+        </button>
+
         <a
-        href={getWhatsAppLink(`Hi! I'd like to order: ${name} (${price})`)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 inline-block w-full text-center bg-primary text-white py-2 rounded-full text-sm font-semibold"
->
-        Order
-      </a>
+          href={getWhatsAppLink(`Hi! I'd like to order: ${name} (${price})`)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 text-center text-xs text-ink underline"
+        >
+          Or order just this on WhatsApp
+        </a>
+      </div>
     </div>
-    </div >
   );
 }

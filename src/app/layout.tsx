@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/lib/cart-context";    // NEW
+import { CartDrawer } from "@/components/CartDrawer";  // NEW
 
 const fraunces = Fraunces({
   variable: "--font-display",
@@ -90,7 +92,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <CartProvider>       
+          {children}
+          <CartDrawer />      
+        </CartProvider>       
       </body>
     </html>
   );
