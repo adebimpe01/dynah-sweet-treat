@@ -3,105 +3,126 @@ export const menuItems = [
     name: "Smoky Jollof with Chicken & Plantain",
     price: "₦4,000",
     image: "/images/food/jollof-chicken.jpg",
+    category: "food",
   },
   {
     name: "Fried Rice with Chicken & Coleslaw",
     price: "₦5,000",
     image: "/images/food/fried-rice-coleslaw (1).jpg",
+    category: "food",
   },
   {
     name: "Mixed Rice with Chicken",
     price: "₦4,500",
     image: "/images/food/Fried-Jollof-Rice .jpg",
+    category: "food",
   },
   {
     name: "Native Rice with Protein",
     price: "₦4,000",
     image: "/images/food/native-rice.jpg",
+    category: "food",
   },
   {
     name: "Asun Smoky Jollof with Beef",
     price: "₦4,000",
     image: "/images/food/Asun.jpg",
+    category: "food",
   },
-   {
+  {
     name: "Ewa agoyin with protien",
     price: "₦5,000",
     image: "/images/food/Ewagoyin.jpg",
+    category: "food",
   },
-   {
+  {
     name: "Stir Fry pasta with chicken",
     price: "₦4,500",
     image: "/images/food/stir-pasta.jpg",
+    category: "food",
   },
   {
     name: "Stir Pasta with Chicken",
     price: "₦4,500",
     image: "/images/food/stir-fry-pasta.jpg",
+    category: "food",
   },
   {
     name: "Chinese Fried Rice with Chicken",
     price: "₦5,000",
     image: "/images/food/chinese-fried-rice (2).jpg",
+    category: "food",
   },
   {
     name: "Rice and Beans with Proteins",
     price: "₦4,000",
     image: "/images/food/asun-jollof.jpg",
+    category: "food",
   },
   {
     name: "Ofada Rice with Ayamase Sauce",
     price: "₦5,000",
     image: "/images/food/ofada-rice(1).jpg",
+    category: "food",
   },
   {
     name: "Asun Pasta with Beef",
     price: "₦4,000",
     image: "/images/food/asun-pasta.jpg",
+    category: "food",
   },
   {
     name: "Chicken and Chips",
     price: "₦5,000",
     image: "/images/food/chicken-chips.jpg",
+    category: "food",
   },
   {
     name: "Moi-moi with Pap/Custard",
     price: "Ask for price",
     image: "/images/food/moimoi(1).jpg",
+    category: "food",
   },
-   {
+  {
     name: "Chapman",
     price: "Ask for price",
     image: "/images/food/Chapman.jpg",
+    category: "drinks",
   },
-   {
+  {
     name: "Youghort",
     price: "Ask for price",
     image: "/images/food/Youghort.jpg",
+    category: "drinks",
   },
-   {
+  {
     name: "Zobo",
     price: "Ask for price",
     image: "/images/food/Zobo.jpg",
+    category: "drinks",
   },
-   {
+  {
     name: "Fruit Juice",
     price: "Ask for price",
     image: "/images/food/fruit-juice.jpg",
+    category: "drinks",
   },
-    {
+  {
     name: "Birthday Food Tray",
     price: "Ask for price",
     image: "/images/food/food-tray-1.jpg",
+    category: "food tray",
   },
-    {
+  {
     name: "Celebration Food Tray",
     price: "Ask for price",
     image: "/images/food/food-tray-2.jpg",
+    category: "food tray",
   },
-    {
+  {
     name: "Food Tray",
     price: "Ask for price",
     image: "/images/food/food-tray-3.jpg",
+    category: "food tray",
   },
 ];
