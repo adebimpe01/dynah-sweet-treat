@@ -21,7 +21,7 @@ export function Menu() {
   }, [query, category]);
 
   return (
-    <section id="menu" className="px-6 py-12 max-w-7xl mx-auto">
+    <section id="menu" className="px-6 py-24 md:py-30 max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
         <div>
           <h2 className="font-display text-3xl font-semibold text-ink">

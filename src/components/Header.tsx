@@ -12,7 +12,7 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-40 bg-white border-b border-line">
-            <div className="flex items-center justify-between px-6 py-4">
+            <div className="flex items-center justify-between px-6 py-5">
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.png" alt="Dynah Sweet Treats logo" width={40} height={40} className="rounded-full" />
                     <span className="font-display text-xl font-semibold text-ink">

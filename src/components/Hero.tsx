@@ -3,7 +3,7 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export function Hero() {
   return (
-    <section id="Home" className="px-4 md:px-6 pt-4">
+    <section id="Home" className="px-4 md:px-6 pt-4 scroll-mt-20">
       <div className="relative w-full aspect-[3/5] sm:aspect-[16/10] md:aspect-[21/9] rounded-3xl overflow-hidden max-w-7xl mx-auto">
         <Image
           src="/images/Asun.jpg"
